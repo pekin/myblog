@@ -4,16 +4,25 @@ class Model_News extends Model{
 	
 	function select_news(){
 		$conn = $this->connect_db();
+                $sum = 3;
+                $page = 0;
+                if (isset($_get[page])){$page = $_get[page];}
 			if($conn == false){
+                                
 				#$result = mysql_query("SELECT * FROM news");
-				$result = mysql_query("SELECT * FROM news ORDER BY id DESC");
+				$result = mysql_query("SELECT * FROM news ORDER BY id DESC LIMIT $page,$sum");
 				while($myrow = mysql_fetch_array($result)){
 				$data [] = $myrow;
 				}
 				#require_once './lib/Pager/Pager.php';
 				#$pager = Pager::factory($result);
+                                $back = $page-$sum;
+                                $next = $page+$sum;
+                                array_push($data, $back, $next);
+                                                                var_dump($back);
 		return $data;
 			}
+                
 		}
 		
 	function select_newsone($id){

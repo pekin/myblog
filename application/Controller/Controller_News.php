@@ -9,8 +9,7 @@ class Controller_News extends Controller
 		
 		$new = new Model_News();
 		$data = $new->select_news();#var_dump($data);
-		echo $this->view->render('news/news_view.php', array('data' => $data, 'pager' => $pager));
-		
+		echo $this->view->render('news/news_view.php', array('data' => $data, 'back' => $back, 'next' => $next));
 		
 	}
 		

@@ -1,4 +1,4 @@
-{% extends "template_view.php" %}
+{% extends "layuot.php" %}
 {% block content %}
 <h1>404</h1>
 <p>

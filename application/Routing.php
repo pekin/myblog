@@ -12,7 +12,7 @@ try {
     $router->add('staticPage', '/(slug:str).php', 'Controller_Main:action_staticPage');
 
     //News
-    $router->add('news', '/news', 'Controller_News:action_index');
+    $router->add('news', '/news', 'Controller_News:action_index' , 'GET|POST');
     $router->add('newsone', '/news/(id:num)', 'Controller_News:action_newsone');
 
     // $router->add('about', '/about', 'AppController:aboutAction');

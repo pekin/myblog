@@ -1,4 +1,4 @@
-{% extends 'template_view.php' %}
+{% extends 'layuot.php' %}
 {% block title %}
 Добавить новость
 {% endblock %}

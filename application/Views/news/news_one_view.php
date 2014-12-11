@@ -1,4 +1,4 @@
-{% extends "template_view.php" %}
+{% extends "layuot.php" %}
 {% block title %}
 {{ data.0.title }}
 {% endblock %}
